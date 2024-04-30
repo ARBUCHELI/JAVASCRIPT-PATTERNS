@@ -1,0 +1,38 @@
+# INTRODUCTION
+--------------
+
+* JavaScript design patterns
+----------------------------
+
+* Structural Patterns
+---------------------
+. Organization of your code.
+
+. Patterns explored: modules, mixins, facade, flyweight, and decorator
+
+. Also will look at patterns that apply to applications at large like MVC, MVP, and MVVM
+
+
+* Creational Patterns
+---------------------
+. Control the creation process of an object.
+
+. Applicable to many languages.
+
+. Patterns explored: classes, constructor, singleton, factory, and abstract factory
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* What you should know
+----------------------
+
+* Basic JavaScript
+------------------
+Functions, variables, scoping, classes, and ES6 syntax should be familiar to you.
+
+
+* Any Editor
+------------
+Visual Studio Code is used in this course.
+
