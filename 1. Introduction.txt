@@ -18,3 +18,28 @@ A general, reusable solution to a commonly occurring problem within a given cont
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Setting up your base project
+------------------------------
+. control + shift + p 
+. Type live server
+. Select Open with live server
+
+index.html
+----------
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Patterns</title>
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+
+index.js
+--------
+console.log('Hello!');
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
