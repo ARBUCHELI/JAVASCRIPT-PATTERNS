@@ -1,0 +1,20 @@
+# 1. INTRODUCTION
+-----------------
+
+* What is a pattern?
+--------------------
+A general, reusable solution to a commonly occurring problem within a given context in software design.
+
+			* SIMPLY A WAY TO RESOLVE PROBLEMS IN CODE.
+
+
+* Types Explored
+----------------
+. Creational - create new things.
+
+. Structural - structure your code.
+
+. Behavioral - use for behaviors in code.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
