@@ -1,0 +1,18 @@
+# 2. CREATIONAL PATTERNS
+------------------------
+
+* What are creational patterns?
+-------------------------------
+
+* Creational Patterns
+---------------------
+. Control the creation process of an object.
+
+. Applicable to many languages.
+
+. Patterns explored: classes, constructor, singleton, factory, and abstract factory.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
