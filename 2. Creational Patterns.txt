@@ -48,6 +48,55 @@ const civic = new Car(4, 'V6', 'grey');
 
 console.log(civic);
 
+* EXAMPLE OF USAGE
+------------------
+One scenario where the JavaScript Class Pattern is particularly useful is when you're building a complex web application with a lot of shared functionality or when you want to organize 
+your code in a more object-oriented manner.
+
+For instance, imagine you're developing a web application for managing a library. You might have multiple types of objects such as books, users, and transactions. Using the class pattern, 
+you can create classes for each of these entities with their own properties and methods. Here's a simplified example:
+
+class Book {
+  constructor(title, author, isbn) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+  }
+
+  displayInfo() {
+    return `${this.title} by ${this.author}`;
+  }
+}
+
+class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+    this.borrowedBooks = [];
+  }
+
+  borrowBook(book) {
+    this.borrowedBooks.push(book);
+  }
+
+  returnBook(book) {
+    this.borrowedBooks = this.borrowedBooks.filter(b => b !== book);
+  }
+}
+
+// Example usage
+const book1 = new Book('The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565');
+const user1 = new User('Alice', 'alice@example.com');
+
+user1.borrowBook(book1);
+
+console.log(user1.borrowedBooks); // Output: [Book {title: "The Great Gatsby", author: "F. Scott Fitzgerald", isbn: "9780743273565"}]
+
+In this example, the Book class represents a book entity with properties like title, author, and isbn, as well as a method displayInfo() to show book information. The User class 
+represents a user entity with properties like name, email, and borrowedBooks, and methods like borrowBook() and returnBook() to manage borrowing and returning books.
+
+Using classes helps in organizing code, promoting reusability, and making it easier to understand and maintain, especially in larger applications.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 * Constructor pattern
@@ -95,7 +144,153 @@ console.log(civic);
 const cx5 = new SUV(4, 'V8', 'red');
 console.log(cx5);
 
+* EXAMPLE OF USAGE
+------------------
+The JavaScript constructor class pattern is particularly useful when you want to create multiple instances of objects that share the same properties and methods but might have different 
+initial values. One common scenario where this pattern is handy is when working with UI components in web development.
+
+Let's consider a simple example of creating a Button class using the constructor class pattern:
+
+
+class Button {
+  constructor(text, onClick) {
+    this.text = text;
+    this.onClick = onClick;
+  }
+
+  render() {
+    const buttonElement = document.createElement('button');
+    buttonElement.textContent = this.text;
+    buttonElement.addEventListener('click', this.onClick);
+    document.body.appendChild(buttonElement);
+  }
+}
+
+// Example usage
+const handleClick = () => {
+  console.log('Button clicked!');
+};
+
+const button1 = new Button('Click me', handleClick);
+button1.render();
+
+const button2 = new Button('Press here', handleClick);
+button2.render();
+
+In this example, the Button class encapsulates the behavior of a button element. It takes a text parameter to set the text content of the button and an onClick parameter to specify the 
+click event handler. The render() method dynamically creates a button element, sets its text content and click event listener, and appends it to the document body.
+
+By using the constructor class pattern, you can easily create multiple instances of the Button class with different text and click handlers, allowing for code reusability and 
+maintainability. This approach is particularly useful in scenarios where you need to create similar UI components dynamically.
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Singleton pattern
+-------------------
+This pattern simply prevents a class from creating more than one instance of the blue print that is defined.
+
+index.js
+--------
+let instance = null;
+
+class Car {
+    constructor(doors, engine, color) {
+        if (!instance) {
+            this.doors = doors;
+            this.engine = engine;
+            this.color = color;
+            instance = this;
+        } else {
+            return instance;
+        }
+    }
+}
+
+const civic = new Car(4, 'V6', 'grey');
+const honda = new Car(2, 'V8', 'red');
+
+console.log(civic);
+console.log(honda);
+
+* EXAMPLE OF USAGE
+------------------
+The JavaScript singleton pattern is useful when you want to ensure that a class has only one instance and provide a global point of access to that instance. One common scenario where this 
+pattern is handy is when working with configurations or managing shared resources across your application.
+
+Let's consider an example where you want to create a logger service using the singleton pattern:
+
+class Logger {
+  constructor() {
+    if (!Logger.instance) {
+      this.logs = [];
+      Logger.instance = this;
+    }
+    return Logger.instance;
+  }
+
+  log(message) {
+    this.logs.push({ message, timestamp: new Date() });
+    console.log(`[${new Date()}] ${message}`);
+  }
+
+  printLogs() {
+    this.logs.forEach(log => {
+      console.log(`[${log.timestamp}] ${log.message}`);
+    });
+  }
+}
+
+// Example usage
+const logger1 = new Logger();
+logger1.log('First log entry');
+
+const logger2 = new Logger(); // Returns the same instance as logger1
+logger2.log('Second log entry');
+
+logger1.printLogs(); // Outputs both log entries
+
+In this example, the Logger class is implemented using the singleton pattern. The constructor checks whether an instance of Logger already exists. If it does not, it creates a new 
+instance and assigns it to Logger.instance. If an instance already exists, it returns the existing instance.
+
+By using the singleton pattern, you ensure that there is only one logger instance throughout your application, allowing different parts of your codebase to access the same logger instance 
+and maintain a single log history. This can be especially useful for centralized logging or managing shared resources like database connections or configuration settings.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
