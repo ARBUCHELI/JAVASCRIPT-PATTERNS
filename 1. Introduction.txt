@@ -43,3 +43,51 @@ console.log('Hello!');
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Functions as first-class citizens
+-----------------------------------
+This means that we can use functions everywhere as variables or something that we can return from another function.
+
+index.js
+--------
+//console.log('Hello!');
+
+const calc = () => {
+    return 4 * 3;
+}
+
+let aNumber = calc();
+
+console.log(aNumber);
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
