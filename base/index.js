@@ -22,9 +22,19 @@ class Car {
     }
 }
 
-const civic = new Car(4, 'V6', 'grey');
+class SUV extends Car {
+    constructor(doors, engine, color) {
+        super(doors, engine, color);
+        this.wheels = 4; //The default value is 4
+    }
+}
 
+const civic = new Car(4, 'V6', 'grey');
 console.log(civic);
+
+const cx5 = new SUV(4, 'V8', 'red');
+console.log(cx5);
+
 
 
 
