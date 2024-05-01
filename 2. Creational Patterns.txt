@@ -50,8 +50,8 @@ console.log(civic);
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Class design pattern
-----------------------
+* Constructor pattern
+---------------------
 Similar to the class prototype pattern, the constructor pattern is one step further from the class pattern where we leverage a class created to create and extended class from it.
 
 When you want to create multiple sub-categories of a class, the constructor pattern is a great way to do it.
@@ -96,8 +96,6 @@ const cx5 = new SUV(4, 'V8', 'red');
 console.log(cx5);
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 
